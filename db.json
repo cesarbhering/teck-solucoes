@@ -1,0 +1,84 @@
+{
+  "users": [
+      {
+        "id": "1",
+        "nome": "João Silva",
+        "cpf": "123.456.789-01",
+        "username": "joaosilva",
+        "email": "joao.silva@example.com",
+        "grupo": "admin"
+      },
+      {
+        "id": "2",
+        "nome": "Maria Oliveira",
+        "cpf": "234.567.890-12",
+        "username": "mariaoliveira",
+        "email": "maria.oliveira@example.com",
+        "grupo": "editor"
+      },
+      {
+        "id": "3",
+        "nome": "Carlos Santos",
+        "cpf": "345.678.901-23",
+        "username": "carlossantos",
+        "email": "carlos.santos@example.com",
+        "grupo": "viewer"
+      },
+      {
+        "id": "4",
+        "nome": "Ana Costa",
+        "cpf": "456.789.012-34",
+        "username": "anacosta",
+        "email": "ana.costa@example.com",
+        "grupo": "admin"
+      },
+      {
+        "id": "5",
+        "nome": "Pedro Lima",
+        "cpf": "567.890.123-45",
+        "username": "pedrolima",
+        "email": "pedro.lima@example.com",
+        "grupo": "editor"
+      },
+      {
+        "id": "6",
+        "nome": "Juliana Rocha",
+        "cpf": "678.901.234-56",
+        "username": "julianarocha",
+        "email": "juliana.rocha@example.com",
+        "grupo": "viewer"
+      },
+      {
+        "id": "7",
+        "nome": "Rafael Souza",
+        "cpf": "789.012.345-67",
+        "username": "rafaelsouza",
+        "email": "rafael.souza@example.com",
+        "grupo": "admin"
+      },
+      {
+        "id": "8",
+        "nome": "Fernanda Ribeiro",
+        "cpf": "890.123.456-78",
+        "username": "fernandaribeiro",
+        "email": "fernanda.ribeiro@example.com",
+        "grupo": "editor"
+      },
+      {
+        "id": "9",
+        "nome": "Bruno Marques",
+        "cpf": "901.234.567-89",
+        "username": "brunomarques",
+        "email": "bruno.marques@example.com",
+        "grupo": "viewer"
+      },
+      {
+        "id": "10",
+        "nome": "Luciana Almeida",
+        "cpf": "012.345.678-90",
+        "username": "lucianaalmeida",
+        "email": "luciana.almeida@example.com",
+        "grupo": "admin"
+      }
+    ]
+}
