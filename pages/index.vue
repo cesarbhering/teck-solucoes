@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
+    <button @click="newUser">Adicionar Novo Usuário</button>
     <UserTable />
   </div>
 </template>
@@ -11,7 +12,13 @@ export default defineNuxtComponent({
     return {
       title: 'Lista de Usuários'
     }
-  }
+  },
+
+  methods: {
+    newUser() {
+      this.$router.push({ name:"user-id", params: { id: 'new' } })
+    }
+  },
 })
 </script>
 
