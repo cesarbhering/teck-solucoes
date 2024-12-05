@@ -25,7 +25,8 @@ export default defineNuxtComponent({
     message(newValue, _oldValue) {
       if (newValue) {
         setTimeout(() => {
-          this.$emit('closeFeedback');
+          this.$emit('update:message', "")
+          this.$emit('update:type', "")
         }, 3000);
       }
     }

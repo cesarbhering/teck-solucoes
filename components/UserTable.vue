@@ -28,10 +28,17 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- Modais -->
+  <ConfirmationDialog :show="confirmationDialog.show" />
 </template>
 
 <script lang="ts">
+import type { ConfirmationDialog } from '~/types/types';
+
 export default defineNuxtComponent({
+  name: "UserTable",
+
   head: {
     link: [
       {
@@ -40,26 +47,32 @@ export default defineNuxtComponent({
       }
     ]
   },
+
   data() {
     return {
       userStore: useUserStore(),
-    }
+      confirmationDialog: {
+        action: "",
+        show: false,
+      } as ConfirmationDialog,
+    };
   },
+
   created() {
-    this.userStore.fetchUserList()
+    this.userStore.fetchUserList();
   },
 
   methods: {
-    handleEditUser(id) {
+    handleEditUser(id?: string) {
       this.$router.push({ name: "user-id", params: { id } })
     },
 
-    async handleDeleteUser(id) {
-      await this.userStore.deleteUser(id)
-      this.userStore.fetchUserList()
-    }
+    async handleDeleteUser(id?: string) {
+      this.confirmationDialog.action = "deletar";
+      this.confirmationDialog.show = true;
+    },
   },
-})
+});
 </script>
 
 <style scoped></style>

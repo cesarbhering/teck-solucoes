@@ -1,11 +1,11 @@
 <template>
   <div>
-    <FeedbackMessage :message="feedback.message" :type="feedback.message" @closeFeedback="handleCloseFeedback"/>
+    <FeedbackMessage v-model:message="feedback.message" v-model:type="feedback.message"/>
     <NuxtPage @showFeedback="handleFeedback"/>
   </div>
 </template>
 <script lang="ts">
-import type { Feedback } from '~/types/Feedback';
+import type { Feedback } from '~/types/types';
 export default defineNuxtComponent({
   name: "defaultLayout",
   data() {
@@ -21,12 +21,6 @@ export default defineNuxtComponent({
     handleFeedback({message, type}: Feedback) {
       this.feedback.message = message
       this.feedback.type = type
-    },
-
-    handleCloseFeedback () {
-      debugger
-      this.feedback.message = ""
-      this.feedback.type = ""
     }
   },
 })
