@@ -11,16 +11,14 @@
       <input required v-model="userStore.user.username" />
       <input required v-model="userStore.user.grupo" />
       <button>{{ buttonActionText }}</button>
-
     </form>
-
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
 export default defineNuxtComponent({
+  name: 'UserForm',
+
   data() {
     return {
       userStore: useUserStore(),
@@ -34,7 +32,7 @@ export default defineNuxtComponent({
     this.userStore.fetchUser(this.router.params.id)
   },
 
-  unmounted () { 
+  unmounted() {
     this.userStore.resetUser()
   },
 
@@ -51,17 +49,17 @@ export default defineNuxtComponent({
     async handleDelete() {
       await this.userStore.deleteUser(this.userStore.user.id)
       this.$router.push("/")
-      
+
     },
 
     async handleSubmit() {
-      debugger
       if (this.isNewUser) {
         await this.userStore.createUser()
         this.$router.push({ name: "user-id", params: { id: this.userStore.user.id } })
         return
       }
       await this.userStore.updateUser()
+      this.$emit('showFeedback', { message: 'Hello from child!', type: 'error' });
     }
   },
 })

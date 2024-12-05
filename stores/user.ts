@@ -9,7 +9,7 @@ interface UserInfo {
 
 interface State {
   userList: UserInfo[];
-  user: UserInfo | null;
+  user: UserInfo;
 }
 
 export const useUserStore = defineStore("user", {

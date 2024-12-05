@@ -50,7 +50,7 @@ export default defineNuxtComponent({
   },
 
   methods: {
-    handleEditHandler(id) {
+    handleEditUser(id) {
       this.$router.push({ name: "user-id", params: { id } })
     },
 
