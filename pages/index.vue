@@ -31,12 +31,17 @@ export default defineNuxtComponent({
 </script>
 
 <style lang="css" scoped>
+
 .header-container {
   position: fixed;
-  margin-bottom: 40px;
+  width: 90vw;
+  margin-bottom: 50px;
   top: 0;
-  width: 100%;
   background-color: #FDF0D5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-container h1 {
