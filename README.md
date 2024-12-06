@@ -1,6 +1,6 @@
 # **Teck Soluções** 
 
-Aplicação criada para o processo seletivo da Teck SOluções.
+Aplicação criada para o processo seletivo da Teck Soluções.
 
 ### Sobre a aplicação
 
