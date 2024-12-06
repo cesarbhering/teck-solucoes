@@ -4,7 +4,7 @@ export type Feedback = {
   type: string;
 }
 
-export type ConfirmationDialog = {
-  action: string;
-  show: boolean;
+export type ConfirmationDialogOptions = {
+  title: string;
+  message: string;
 }

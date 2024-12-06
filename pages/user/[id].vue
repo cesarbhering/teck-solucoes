@@ -1,8 +1,7 @@
 <template>
   <div>
     <h1>Editar Usuário</h1>
-    <button @click="handleDelete">Excluir Usuário</button>
-    <button>Voltar a Listagem</button>
+    <button @click="$router.push('/')">Voltar a Listagem</button>
 
     <form ref="user-form" @submit.prevent="handleSubmit">
       <input required v-model="userStore.user.nome" />
@@ -26,10 +25,10 @@ export default defineNuxtComponent({
     }
   },
 
-  created() {
-    this.router = useRoute()
-    this.userStore = useUserStore()
-    this.userStore.fetchUser(this.router.params.id)
+  mounted() {
+    if (!this.isNewUser) {
+      this.userStore.fetchUser(this.router.params.id as string)
+    }
   },
 
   unmounted() {
@@ -46,12 +45,6 @@ export default defineNuxtComponent({
   },
 
   methods: {
-    async handleDelete() {
-      await this.userStore.deleteUser(this.userStore.user.id)
-      this.$router.push("/")
-
-    },
-
     async handleSubmit() {
       if (this.isNewUser) {
         await this.userStore.createUser()
@@ -59,7 +52,7 @@ export default defineNuxtComponent({
         return
       }
       await this.userStore.updateUser()
-      this.$emit('showFeedback', { message: 'Hello from child!', type: 'error' });
+      this.$emit('showFeedback', { message: 'Usuário editado com sucesso', type: 'success' });
     }
   },
 })

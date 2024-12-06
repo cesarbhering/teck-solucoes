@@ -2,7 +2,7 @@
   <div>
     <h1>{{ title }}</h1>
     <button @click="newUser">Adicionar Novo Usuário</button>
-    <UserTable />
+    <UserTable @showFeedback="$emit('showFeedback', $event)"/>
   </div>
 </template>
 

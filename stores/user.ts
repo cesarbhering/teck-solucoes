@@ -76,15 +76,13 @@ export const useUserStore = defineStore("user", {
 
     async deleteUser(id: string) {
       try {
-      await $fetch<UserInfo>(
-        `http://localhost:3001/users/${id}`,
-        {
+        const deletedUser = await $fetch<UserInfo>(`http://localhost:3001/users/${id}`, {
           method: "DELETE",
-        }
-      );
-    } catch {
-      ("Failed to delete user data");
-    }
+        });
+        return deletedUser
+      } catch {
+        ("Failed to delete user data");
+      }
     },
 
     resetUser() {

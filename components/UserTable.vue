@@ -18,11 +18,9 @@
         <td>{{ user.email }}</td>
         <td>{{ user.grupo }}</td>
         <td>
-          <div @click="handleEditUser(user.id)">
-            <i class="fas fa-edit" />
-          </div>
-          <div @click="handleDeleteUser(user.id)">
-            <i class="fas fa-trash" />
+          <div class="actions-container">
+            <div @click="handleEditUser(user.id)" class="edit" />
+            <div @click="showDeleteDialog(user.id)" class="delete" />
           </div>
         </td>
       </tr>
@@ -30,31 +28,18 @@
   </table>
 
   <!-- Modais -->
-  <ConfirmationDialog :show="confirmationDialog.show" />
+  <ConfirmationDialog ref="confirmation-dialog" />
 </template>
 
 <script lang="ts">
-import type { ConfirmationDialog } from '~/types/types';
+import type { ConfirmationDialogOptions } from '~/types/types';
 
 export default defineNuxtComponent({
   name: "UserTable",
 
-  head: {
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
-      }
-    ]
-  },
-
   data() {
     return {
-      userStore: useUserStore(),
-      confirmationDialog: {
-        action: "",
-        show: false,
-      } as ConfirmationDialog,
+      userStore: useUserStore()
     };
   },
 
@@ -67,12 +52,43 @@ export default defineNuxtComponent({
       this.$router.push({ name: "user-id", params: { id } })
     },
 
-    async handleDeleteUser(id?: string) {
-      this.confirmationDialog.action = "deletar";
-      this.confirmationDialog.show = true;
-    },
+    async showDeleteDialog(id?: string) {
+      if (id) {
+        await (this.$refs['confirmation-dialog'] as { show: (options: ConfirmationDialogOptions) => Promise<boolean> }).show({
+          title: 'Excluir Usuário',
+          message: 'Tem certeza que deseja excluir o usuário?',
+        }).then(async (response) => {
+          if (response) {
+            await this.userStore.deleteUser(id);
+            // Atuliza lista
+            this.userStore.fetchUserList();
+            this.$emit('showFeedback', { message: 'Usuário excluído com sucesso', type: 'success' });
+            return
+          }
+        })
+      }
+      return this.$emit('showFeedback', { message: 'Erro ao tentar deletar usuário', type: 'error' });
+    }
   },
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.actions-container {
+  display: flex;
+}
+
+.delete {
+  width: 40px;
+  height: 40px;
+  background: url("public/delete.svg") center no-repeat;
+  background-size: 16px;
+}
+
+.edit {
+  width: 35px;
+  height: 40px;
+  background: url("public/edit.svg") center no-repeat;
+  background-size: 16px;
+}
+</style>
