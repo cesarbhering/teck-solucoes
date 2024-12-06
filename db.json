@@ -1,84 +1,55 @@
 {
   "users": [
-      {
-        "id": "1",
-        "nome": "João Silva",
-        "cpf": "123.456.789-01",
-        "username": "joaosilva",
-        "email": "joao.silva@example.com",
-        "grupo": "admin"
-      },
-      {
-        "id": "2",
-        "nome": "Maria Oliveira",
-        "cpf": "234.567.890-12",
-        "username": "mariaoliveira",
-        "email": "maria.oliveira@example.com",
-        "grupo": "editor"
-      },
-      {
-        "id": "3",
-        "nome": "Carlos Santos",
-        "cpf": "345.678.901-23",
-        "username": "carlossantos",
-        "email": "carlos.santos@example.com",
-        "grupo": "viewer"
-      },
-      {
-        "id": "4",
-        "nome": "Ana Costa",
-        "cpf": "456.789.012-34",
-        "username": "anacosta",
-        "email": "ana.costa@example.com",
-        "grupo": "admin"
-      },
-      {
-        "id": "5",
-        "nome": "Pedro Lima",
-        "cpf": "567.890.123-45",
-        "username": "pedrolima",
-        "email": "pedro.lima@example.com",
-        "grupo": "editor"
-      },
-      {
-        "id": "6",
-        "nome": "Juliana Rocha",
-        "cpf": "678.901.234-56",
-        "username": "julianarocha",
-        "email": "juliana.rocha@example.com",
-        "grupo": "viewer"
-      },
-      {
-        "id": "7",
-        "nome": "Rafael Souza",
-        "cpf": "789.012.345-67",
-        "username": "rafaelsouza",
-        "email": "rafael.souza@example.com",
-        "grupo": "admin"
-      },
-      {
-        "id": "8",
-        "nome": "Fernanda Ribeiro",
-        "cpf": "890.123.456-78",
-        "username": "fernandaribeiro",
-        "email": "fernanda.ribeiro@example.com",
-        "grupo": "editor"
-      },
-      {
-        "id": "9",
-        "nome": "Bruno Marques",
-        "cpf": "901.234.567-89",
-        "username": "brunomarques",
-        "email": "bruno.marques@example.com",
-        "grupo": "viewer"
-      },
-      {
-        "id": "10",
-        "nome": "Luciana Almeida",
-        "cpf": "012.345.678-90",
-        "username": "lucianaalmeida",
-        "email": "luciana.almeida@example.com",
-        "grupo": "admin"
-      }
-    ]
+    { "id": "1", "nome": "João Silva", "cpf": 12345678901, "username": "joaosilva", "email": "joao.silva@example.com", "grupo": "admin" },
+    { "id": "2", "nome": "Maria Oliveira", "cpf": 23456789012, "username": "mariaoliveira", "email": "maria.oliveira@example.com", "grupo": "editor" },
+    { "id": "3", "nome": "Carlos Santos", "cpf": 34567890123, "username": "carlossantos", "email": "carlos.santos@example.com", "grupo": "viewer" },
+    { "id": "4", "nome": "Ana Costa", "cpf": 45678901234, "username": "anacosta", "email": "ana.costa@example.com", "grupo": "admin" },
+    { "id": "5", "nome": "Pedro Lima", "cpf": 56789012345, "username": "pedrolima", "email": "pedro.lima@example.com", "grupo": "editor" },
+    { "id": "6", "nome": "Juliana Rocha", "cpf": 67890123456, "username": "julianarocha", "email": "juliana.rocha@example.com", "grupo": "viewer" },
+    { "id": "7", "nome": "Rafael Souza", "cpf": 78901234567, "username": "rafaelsouza", "email": "rafael.souza@example.com", "grupo": "admin" },
+    { "id": "8", "nome": "Fernanda Ribeiro", "cpf": 89012345678, "username": "fernandaribeiro", "email": "fernanda.ribeiro@example.com", "grupo": "editor" },
+    { "id": "9", "nome": "Bruno Marques", "cpf": 90123456789, "username": "brunomarques", "email": "bruno.marques@example.com", "grupo": "viewer" },
+    { "id": "10", "nome": "Luciana Almeida", "cpf": 1234567890, "username": "lucianaalmeida", "email": "luciana.almeida@example.com", "grupo": "admin" },
+    { "id": "11", "nome": "Diego Monteiro", "cpf": 98765432109, "username": "diegomonteiro", "email": "diego.monteiro@example.com", "grupo": "editor" },
+    { "id": "12", "nome": "Paula Ferreira", "cpf": 87654321098, "username": "paulaferreira", "email": "paula.ferreira@example.com", "grupo": "viewer" },
+    { "id": "13", "nome": "Vinícius Araújo", "cpf": 76543210987, "username": "viniciusaraujo", "email": "vinicius.araujo@example.com", "grupo": "admin" },
+    { "id": "14", "nome": "Sofia Melo", "cpf": 65432109876, "username": "sofiamelo", "email": "sofia.melo@example.com", "grupo": "editor" },
+    { "id": "15", "nome": "Marcelo Nogueira", "cpf": 54321098765, "username": "marcelonogueira", "email": "marcelo.nogueira@example.com", "grupo": "viewer" },
+    { "id": "16", "nome": "Beatriz Cunha", "cpf": 43210987654, "username": "beatrizcunha", "email": "beatriz.cunha@example.com", "grupo": "admin" },
+    { "id": "17", "nome": "Eduardo Alves", "cpf": 32109876543, "username": "eduardoalves", "email": "eduardo.alves@example.com", "grupo": "editor" },
+    { "id": "18", "nome": "Isabela Pinto", "cpf": 21098765432, "username": "isabelapinto", "email": "isabela.pinto@example.com", "grupo": "viewer" },
+    { "id": "19", "nome": "Renato Castro", "cpf": 10987654321, "username": "renatocastro", "email": "renato.castro@example.com", "grupo": "admin" },
+    { "id": "20", "nome": "Larissa Farias", "cpf": 19876543210, "username": "larissafarias", "email": "larissa.farias@example.com", "grupo": "editor" },
+    { "id": "21", "nome": "Lucas Martins", "cpf": 29765432109, "username": "lucasmartins", "email": "lucas.martins@example.com", "grupo": "viewer" },
+    { "id": "22", "nome": "Aline Carvalho", "cpf": 39654321098, "username": "alinecarvalho", "email": "aline.carvalho@example.com", "grupo": "admin" },
+    { "id": "23", "nome": "Victor Ramos", "cpf": 49543210987, "username": "victorramos", "email": "victor.ramos@example.com", "grupo": "editor" },
+    { "id": "24", "nome": "Camila Dias", "cpf": 59432109876, "username": "camiladias", "email": "camila.dias@example.com", "grupo": "viewer" },
+    { "id": "25", "nome": "Thiago Rezende", "cpf": 69321098765, "username": "thiagorezende", "email": "thiago.rezende@example.com", "grupo": "admin" },
+    { "id": "26", "nome": "Patrícia Guedes", "cpf": 79210987654, "username": "patriciaguedes", "email": "patricia.guedes@example.com", "grupo": "editor" },
+    { "id": "27", "nome": "Gabriel Rocha", "cpf": 89109876543, "username": "gabrielrocha", "email": "gabriel.rocha@example.com", "grupo": "viewer" },
+    { "id": "28", "nome": "Carolina Moraes", "cpf": 99098765432, "username": "carolinamoraes", "email": "carolina.moraes@example.com", "grupo": "admin" },
+    { "id": "29", "nome": "Rodrigo Vieira", "cpf": 18987654321, "username": "rodrigovieira", "email": "rodrigo.vieira@example.com", "grupo": "editor" },
+    { "id": "30", "nome": "Natália Gomes", "cpf": 28976543210, "username": "nataliagomes", "email": "natalia.gomes@example.com", "grupo": "viewer" },
+    { "id": "31", "nome": "Felipe Correia", "cpf": 38965432109, "username": "felipecorreia", "email": "felipe.correia@example.com", "grupo": "admin" },
+    { "id": "32", "nome": "Alessandra Teixeira", "cpf": 48954321098, "username": "alessandrateixeira", "email": "alessandra.teixeira@example.com", "grupo": "editor" },
+    { "id": "33", "nome": "André Barbosa", "cpf": 58943210987, "username": "andrebarbosa", "email": "andre.barbosa@example.com", "grupo": "viewer" },
+    { "id": "34", "nome": "Amanda Fonseca", "cpf": 68932109876, "username": "amandafonseca", "email": "amanda.fonseca@example.com", "grupo": "admin" },
+    { "id": "35", "nome": "Gustavo Lima", "cpf": 78921098765, "username": "gustavolima", "email": "gustavo.lima@example.com", "grupo": "editor" },
+    { "id": "36", "nome": "Elaine Santos", "cpf": 88910987654, "username": "elainesantos", "email": "elaine.santos@example.com", "grupo": "viewer" },
+    { "id": "37", "nome": "Fábio Almeida", "cpf": 98909876543, "username": "fabioalmeida", "email": "fabio.almeida@example.com", "grupo": "admin" },
+    { "id": "38", "nome": "Lorena Pereira", "cpf": 19898765432, "username": "lorenapereira", "email": "lorena.pereira@example.com", "grupo": "editor" },
+    { "id": "39", "nome": "Cláudio Silva", "cpf": 29887654321, "username": "claudiosilva", "email": "claudio.silva@example.com", "grupo": "viewer" },
+    { "id": "40", "nome": "Daniele Moura", "cpf": 39876543210, "username": "danielemoura", "email": "daniele.moura@example.com", "grupo": "admin" },
+    { "id": "41", "nome": "Ricardo Lopes", "cpf": 49865432109, "username": "ricardolopes", "email": "ricardo.lopes@example.com", "grupo": "editor" },
+    { "id": "42", "nome": "Michele Vargas", "cpf": 59854321098, "username": "michelevargas", "email": "michele.vargas@example.com", "grupo": "viewer" },
+    { "id": "43", "nome": "Hugo Batista", "cpf": 69843210987, "username": "hugobatista", "email": "hugo.batista@example.com", "grupo": "admin" },
+    { "id": "44", "nome": "Letícia Lopes", "cpf": 79832109876, "username": "leticialopes", "email": "leticia.lopes@example.com", "grupo": "editor" },
+    { "id": "45", "nome": "Brenda Martins", "cpf": 89821098765, "username": "brendamartins", "email": "brenda.martins@example.com", "grupo": "viewer" },
+    { "id": "46", "nome": "Fernando Cruz", "cpf": 99810987654, "username": "fernandocruz", "email": "fernando.cruz@example.com", "grupo": "admin" },
+    { "id": "47", "nome": "Vanessa Andrade", "cpf": 10998765432, "username": "vanessaandrade", "email": "vanessa.andrade@example.com", "grupo": "editor" },
+    { "id": "48", "nome": "Leandro Campos", "cpf": 20987654321, "username": "leandrocampos", "email": "leandro.campos@example.com", "grupo": "viewer" },
+    { "id": "49", "nome": "Célia Furtado", "cpf": 30976543210, "username": "celiafurtado", "email": "celia.furtado@example.com", "grupo": "admin" },
+    { "id": "50", "nome": "Márcio Mendes", "cpf": 40965432109, "username": "marciomendes", "email": "marcio.mendes@example.com", "grupo": "editor" }
+  ]
+  
 }

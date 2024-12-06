@@ -1,75 +1,23 @@
-# Nuxt Minimal Starter
+# **Teck Soluções** 
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Aplicação criada para o processo seletivo da Teck SOluções.
 
-## Setup
+### Sobre a aplicação
 
-Make sure to install dependencies:
+Foi desenvolvido o frontend de um CRUD utilizando Nuxt3 com Options API e json-server para mock de banco de API. 
 
-```bash
-# npm
-npm install
+------
 
-# pnpm
-pnpm install
+### Rodando a aplicação
 
-# yarn
-yarn install
+Na pasta raíz da aplicação executar os seguintes comandos:
 
-# bun
-bun install
-```
+`npm install` 
 
-## Development Server
+`npm run start`
 
-Start the development server on `http://localhost:3000`:
+O comando `npm run start` irá iniciar a aplicação do nuxt e também o json-server, necessário para testar a aplicação corretamente. 
 
-```bash
-# npm
-npm run dev
+A aplicação irá rodar por padrão na porta 3000. 
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Agora basta acesar http://localhost:3000/.
