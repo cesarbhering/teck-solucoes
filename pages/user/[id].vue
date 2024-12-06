@@ -18,6 +18,8 @@
 export default defineNuxtComponent({
   name: 'UserForm',
 
+  emits: ['showFeedback'],
+
   data() {
     return {
       userStore: useUserStore(),

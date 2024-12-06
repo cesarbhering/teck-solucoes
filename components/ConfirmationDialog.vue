@@ -1,12 +1,13 @@
 <template>
   <div>
     <div v-if="isOpen" class="modal-overlay">
-      <div class="modal-content">
+      <div class="modal-container">
         <h2>{{ title }}</h2>
         <p>{{ message }}</p>
-        <button @click="handleResponse(false)">Cancelar</button>
-        <button @click="handleResponse(true)">Confirmar</button>
-
+        <div class="buttons-container">
+          <button class="cancelar" @click="handleResponse(false)">Cancelar</button>
+          <button @click="handleResponse(true)">Confirmar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -63,9 +64,24 @@ export default {
   z-index: 9999;
 }
 
-.modal-content {
+.modal-container {
   background-color: white;
   padding: 20px;
   border-radius: 4px;
+}
+
+.modal-container h2 {
+  margin-top: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  justify-content: space-around;
+}
+
+.cancelar {
+  background-color: #C1121F;
 }
 </style>

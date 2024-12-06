@@ -37,6 +37,17 @@ export default defineNuxtComponent({
 <style scoped>
 .message {
   position: absolute;
+  top: 8%;
+  left: 50%;
+  z-index: 2;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 14px;
+}
+
+.message--success {
+  background-color: #669BBC;
+  color: white;
 }
 
 .message-fade-enter-active,
@@ -47,6 +58,6 @@ export default defineNuxtComponent({
 .message-fade-enter-from,
 .message-fade-leave-to {
   opacity: 0;
-  transform: translate(-50%, -20px);
+  transform: translateY(-50%);
 }
 </style>

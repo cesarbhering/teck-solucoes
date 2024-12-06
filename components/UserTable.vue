@@ -1,13 +1,13 @@
 <template>
-  <table>
+  <table class="user-table">
     <thead>
       <tr>
         <th>Nome</th>
         <th>CPF</th>
-        <th>username</th>
-        <th>email</th>
-        <th>grupo</th>
-        <th>ações</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Grupo</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -19,14 +19,15 @@
         <td>{{ user.grupo }}</td>
         <td>
           <div class="actions-container">
-            <div @click="handleEditUser(user.id)" class="edit" />
+            <nuxt-link :to="{ name: 'user-id', params: { id: 'novo', sistema: user.id } }">
+              <div @click="handleEditUser(user.id)" class="edit" />
+            </nuxt-link>
             <div @click="showDeleteDialog(user.id)" class="delete" />
           </div>
         </td>
       </tr>
     </tbody>
   </table>
-
   <!-- Modais -->
   <ConfirmationDialog ref="confirmation-dialog" />
 </template>
@@ -36,6 +37,8 @@ import type { ConfirmationDialogOptions } from '~/types/types';
 
 export default defineNuxtComponent({
   name: "UserTable",
+
+  emits: ['showFeedback'],
 
   data() {
     return {
@@ -48,16 +51,13 @@ export default defineNuxtComponent({
   },
 
   methods: {
-    handleEditUser(id?: string) {
-      this.$router.push({ name: "user-id", params: { id } })
-    },
-
     async showDeleteDialog(id?: string) {
       if (id) {
         await (this.$refs['confirmation-dialog'] as { show: (options: ConfirmationDialogOptions) => Promise<boolean> }).show({
           title: 'Excluir Usuário',
           message: 'Tem certeza que deseja excluir o usuário?',
         }).then(async (response) => {
+
           if (response) {
             await this.userStore.deleteUser(id);
             // Atuliza lista
@@ -67,27 +67,57 @@ export default defineNuxtComponent({
           }
         })
       }
-      return this.$emit('showFeedback', { message: 'Erro ao tentar deletar usuário', type: 'error' });
     }
   },
 });
 </script>
 
 <style scoped>
+.user-table {
+  border-collapse: collapse;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.user-table tr:not(:last-child) {
+  border-bottom: 1px solid #C1121F;
+}
+
+.user-table td,
+.user-table th {
+  padding: 4px;
+  border: none;
+}
+
 .actions-container {
   display: flex;
 }
 
-.delete {
-  width: 40px;
-  height: 40px;
-  background: url("public/delete.svg") center no-repeat;
-  background-size: 16px;
+@media (max-width: 768px) {
+  thead {
+    display: none;
+  }
+
+  td {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+  }
+
 }
 
+.delete {
+  width: 25px;
+  height: 30px;
+  background: url("public/delete.svg") center no-repeat;
+  background-size: 16px;
+  cursor: grab;
+}
+
+
 .edit {
-  width: 35px;
-  height: 40px;
+  width: 25px;
+  height: 30px;
   background: url("public/edit.svg") center no-repeat;
   background-size: 16px;
 }
